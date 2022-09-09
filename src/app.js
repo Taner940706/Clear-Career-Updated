@@ -43,6 +43,7 @@ function setUserNav() {
     if (user) {
       document.querySelectorAll('.user').forEach(x => x.style.display = 'inline');
       document.querySelectorAll('.guest').forEach(x => x.style.display = 'none');
+      document.querySelector('#spn').textContent = `Welcome, ${user.email}`;
     } else {
       document.querySelectorAll('.user').forEach(x => x.style.display = 'none');
       document.querySelectorAll('.guest').forEach(x => x.style.display = 'inline');

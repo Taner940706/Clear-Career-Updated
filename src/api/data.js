@@ -11,6 +11,9 @@ export const logout = api.logout;
 export async function getAllOffers() {
     return await api.get(host + '/data/offers?sortBy=_createdOn%20desc');
 }
+export async function getRecentOffers() {
+    return await api.get(host + '/data/offers?sortBy=_createdOn%20asc&distinct=applications');
+}
 export async function getMyOffers(userId) {
     return await api.get(host + `/data/offers?where=_ownerId%3D%22${userId}%22&sortBy=_createdOn%20desc`);
 }

@@ -1,6 +1,7 @@
 import { html } from '../../node_modules/lit-html/lit-html.js';
 import {searchOffers, getAllOffers } from '../api/data.js';
 
+
 const searchTamplate = (offer, onSearch, params = '') => html`<section id="dashboard">
 
 <form @submit=${onSearch}>
@@ -49,3 +50,4 @@ export async function searchPage(ctx){
       }
   }
 }
+
